@@ -10,3 +10,4 @@ export 'package:quran_app/core/bindings/app_bindings.dart';
 export 'package:quran_app/core/constant/app_size.dart';
 export 'package:quran_app/core/routes/app_routes.dart';
 export 'package:quran_app/view/splash/splash_view.dart';
+export 'package:quran_app/view/splash/splash_controller.dart';

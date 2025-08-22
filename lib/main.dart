@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return GetMaterialApp(
+            theme: ThemeData(fontFamily: 'almarai'),
             initialBinding: AppBindings(),
             getPages: AppRoutes.getPages,
             debugShowCheckedModeBanner: false,
