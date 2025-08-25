@@ -1,0 +1,48 @@
+import 'package:quran_app/core/constant/app_image.dart';
+import 'package:quran_app/core/export/export.dart';
+
+class AppConstants {
+  static List<String> gridViewTitle = [
+    'أسماء الله الحسني',
+    'التسبيح الالكتروني',
+    'الأدعية',
+    'الأحاديث',
+    'الأذكار',
+    'القرأن',
+  ];
+  static List<String> listView02Title = [
+    'المقالات',
+    'الصوتيات',
+    'الفيديوهات',
+    'الخطب',
+    'الكنب',
+  ];
+  static List<String> listView02SubTitle = [
+    'قم بتصفح المقالات الدينية من هنا',
+    'استمع الي المساند والمحاضرات الصوتية من هنا',
+    'عرض الفيديوهات الدينية من هنا',
+    'شاهد الخطب الدينية كلها من هنا',
+    'قم بتصفح الكتب الدينية وكتب السنة',
+  ];
+  static List<Color> listView02Color = [
+    const Color(0xff284d45),
+    const Color(0xff313131),
+    const Color(0xff773d3d),
+    const Color(0xff453d77),
+    const Color(0xff615036)
+  ];
+
+  static List<String> gridViewImages = [
+    AppImage.grid05,
+    AppImage.grid04,
+    AppImage.grid03,
+    AppImage.grid02,
+    AppImage.grid01,
+    AppImage.grid00,
+  ];
+  static List<String> tapBarTitle = [
+    'جميع التصنيفات',
+    'كل الوسائط',
+    'أوقات الصلاة',
+  ];
+}
