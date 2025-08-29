@@ -1,4 +1,3 @@
-import 'package:quran_app/core/constant/app_image.dart';
 import 'package:quran_app/core/export/export.dart';
 
 class AppConstants {

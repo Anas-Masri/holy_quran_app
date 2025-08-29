@@ -17,17 +17,10 @@ class HomeView extends StatelessWidget {
                   return Column(
                     children: [
                       SizedBox(height: 41.h),
-                      Row(children: [
-                        SvgPicture.asset(AppImage.menuHamburger),
-                        SizedBox(width: 16.w),
-                        Text('القرآن الكريم',
-                            style: TextStyle(
-                                fontSize: 20.sp,
-                                fontWeight: FontWeight.w800,
-                                color: AppColor.primaryColor)),
-                        const Spacer(),
-                        SvgPicture.asset(AppImage.search),
-                      ]),
+                      CustomAppBar(
+                        leftIcon: AppImage.search,
+                        title: 'القرآن الكريم',
+                      ),
                       SizedBox(height: 30.h),
                       const CustomCardWidget(),
                       SizedBox(height: 24.h),
@@ -76,34 +69,19 @@ class HomeView extends StatelessWidget {
                             );
                           },
                         ),
-
-                        /*    Row(children: [
-                          SizedBox(width: 5.w),
-                          const CustomTapButton(
-                            isSelected: true,
-                            title: 'جميع التصنيفات',
-                          ),
-                          SizedBox(width: 10.w),
-                          const CustomTapButton(
-                            isSelected: false,
-                            title: 'كل الوسائط',
-                          ),
-                          SizedBox(width: 10.w),
-                          const CustomTapButton(
-                            isSelected: false,
-                            title: 'أوقات الصلاة',
-                          ),
-                          SizedBox(width: 5.w),
-                        ]),*/
                       ),
                       SizedBox(height: 20.h),
                       Expanded(
                         child: PageView(
+                          physics: const NeverScrollableScrollPhysics(),
                           controller: controller.pageController,
-                          children: const [
-                            PageView01(),
-                            PageView02(),
-                            PageView03(),
+                          children: [
+                            PageView01(
+                              onTap: (p0) =>
+                                  controller.navigateToAzkarDetails(p0),
+                            ),
+                            const PageView02(),
+                            const PageView03(),
                           ],
                         ),
                       ),

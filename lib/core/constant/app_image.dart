@@ -17,6 +17,7 @@ class AppImage {
 
   static String cardImage = 'assets/images/card_image.png';
 
-  static String menuHamburger = 'assets/svg/Menu Hamburger.svg';
+  static const String menuHamburger = 'assets/svg/Menu Hamburger.svg';
   static String search = 'assets/svg/search.svg';
+  static String arrow = 'assets/svg/arrow-left.svg';
 }

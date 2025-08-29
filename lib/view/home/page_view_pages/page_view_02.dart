@@ -1,5 +1,5 @@
 import 'package:quran_app/core/export/export.dart';
-import 'package:quran_app/core/widgets/custom_list_tile.dart';
+import 'package:quran_app/view/widgets/custom_list_tile.dart';
 
 class PageView02 extends StatelessWidget {
   const PageView02({
