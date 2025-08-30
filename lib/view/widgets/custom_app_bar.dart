@@ -7,11 +7,13 @@ class CustomAppBar extends StatelessWidget {
     required this.leftIcon,
     this.rightIcon = AppImage.menuHamburger,
     this.centerTitle = false,
+    this.onTap,
   });
   final String title;
   final String leftIcon;
   final String rightIcon;
   final bool centerTitle;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Row(children: [
@@ -23,7 +25,7 @@ class CustomAppBar extends StatelessWidget {
               fontWeight: FontWeight.w800,
               color: AppColor.primaryColor)),
       const Spacer(),
-      SvgPicture.asset(leftIcon),
+      GestureDetector(onTap: onTap, child: SvgPicture.asset(leftIcon)),
     ]);
   }
 }

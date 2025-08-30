@@ -19,6 +19,7 @@ class AzkarView extends StatelessWidget {
                     return Column(
                       children: [
                         CustomAppBar(
+                          onTap: () => Get.back(),
                           title: 'الاذكار',
                           leftIcon: AppImage.arrow,
                           centerTitle: true,

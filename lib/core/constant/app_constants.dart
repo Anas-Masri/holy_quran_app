@@ -3,7 +3,7 @@ import 'package:quran_app/core/export/export.dart';
 class AppConstants {
   static List<String> gridViewTitle = [
     'أسماء الله الحسني',
-    'التسبيح الالكتروني',
+    'الورد اليومي',
     'الأدعية',
     'الأحاديث',
     'الأذكار',
@@ -23,6 +23,14 @@ class AppConstants {
     'شاهد الخطب الدينية كلها من هنا',
     'قم بتصفح الكتب الدينية وكتب السنة',
   ];
+
+  static List<String> tasbihList = [
+    'استغفر الله و اتوب اليه',
+    'لا اله الا الله',
+    'الصلاة على النبي',
+    'اللهم اغننا بحلالك عن حرامك وبطاعتك عن معصيتك وبفضلك عمن سواك'
+  ];
+
   static List<Color> listView02Color = [
     const Color(0xff284d45),
     const Color(0xff313131),

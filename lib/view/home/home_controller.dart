@@ -5,25 +5,48 @@ import 'package:quran_app/core/services/api_service.dart';
 import 'package:quran_app/model/azkar_model.dart';
 
 class HomeController extends GetxController {
+  int tasbihCounterTemp = 0;
   int currentIndex = 0;
-  // bool isOpened = false;
   int selectedIndex = 0;
   PageController pageController = PageController(initialPage: 0);
   List<bool> isOpenList = [];
   List<AzkarModel> items = [];
+  int selectedIndexTasbihList = 0;
   Status status = Status.init;
+  List<int> counters = List.generate(AppConstants.tasbihList.length, (_) => 0);
   @override
   void onInit() {
     getAllAzkar();
     super.onInit();
   }
 
+  void tasbihIncrement() {
+    counters[selectedIndexTasbihList]++;
+
+    tasbihCounterTemp = counters[selectedIndexTasbihList];
+    counters[selectedIndexTasbihList] = tasbihCounterTemp;
+    update();
+  }
+
+  void tasbihReset() {
+    tasbihCounterTemp = 0;
+    counters[selectedIndexTasbihList] = tasbihCounterTemp;
+
+    update();
+  }
+
+  void changeSelectedTasbihIndex() {
+    tasbihCounterTemp = counters[selectedIndexTasbihList];
+    selectedIndexTasbihList < AppConstants.tasbihList.length - 1
+        ? selectedIndexTasbihList++
+        : selectedIndexTasbihList = 0;
+    tasbihCounterTemp = counters[selectedIndexTasbihList];
+    update();
+  }
+
   void openDropDown(int index) {
-    // selectedIndex == index ? selectedIndex = -1 : selectedIndex = index;
     isOpenList[index] = !isOpenList[index];
     log([index].toString());
-    // isOpened = !isOpened;
-
     update();
   }
 
@@ -54,7 +77,7 @@ class HomeController extends GetxController {
       case 0:
         Get.toNamed(Routes.azkarView);
       case 1:
-        Get.toNamed(Routes.azkarView);
+        Get.toNamed(Routes.tasbihView);
       case 2:
         Get.toNamed(Routes.azkarView);
       case 3:
@@ -72,6 +95,11 @@ class HomeController extends GetxController {
 }
 
 enum Status { init, loading, success, error }
+
+
+
+
+
 /**
  * 
  *  'أسماء الله الحسني',

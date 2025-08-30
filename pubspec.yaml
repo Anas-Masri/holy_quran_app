@@ -38,6 +38,7 @@ dependencies:
   http: ^1.2.2
   path_provider: null
   quran: null
+  segment_display:
 dev_dependencies:
 
   # The "flutter_lints" package below contains a set of recommended lints to
