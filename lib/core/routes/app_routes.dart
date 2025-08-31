@@ -1,4 +1,5 @@
 import 'package:quran_app/core/export/export.dart';
+import 'package:quran_app/view/sub_home/quran_view.dart';
 
 class AppRoutes {
   static List<GetPage> getPages = [
@@ -6,5 +7,6 @@ class AppRoutes {
     GetPage(name: Routes.homeView, page: () => const HomeView()),
     GetPage(name: Routes.azkarView, page: () => const AzkarView()),
     GetPage(name: Routes.tasbihView, page: () => const TasbihView()),
+    GetPage(name: Routes.quranView, page: () => const QuranView()),
   ];
 }

@@ -1,8 +1,6 @@
 import 'dart:developer';
 
 import 'package:quran_app/core/export/export.dart';
-import 'package:quran_app/core/services/api_service.dart';
-import 'package:quran_app/model/azkar_model.dart';
 
 class HomeController extends GetxController {
   int tasbihCounterTemp = 0;
@@ -85,7 +83,7 @@ class HomeController extends GetxController {
       case 4:
         Get.toNamed(Routes.azkarView);
       case 5:
-        Get.toNamed(Routes.azkarView);
+        Get.toNamed(Routes.quranView);
 
         break;
       default:

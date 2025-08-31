@@ -1,5 +1,4 @@
 import 'package:quran_app/core/export/export.dart';
-import 'package:quran_app/view/widgets/custom_icon_background.dart';
 
 class TasbihView extends StatelessWidget {
   const TasbihView({super.key});
