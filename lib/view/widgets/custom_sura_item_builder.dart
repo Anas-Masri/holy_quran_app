@@ -56,7 +56,10 @@ class CustomSuraItemBuilder extends StatelessWidget {
           child: Text(
             Utiles.convertToArabicNumbers('$suraNumber'),
             style: TextStyle(
-                fontSize: 32.sp, fontWeight: FontWeight.w700, fontFamily: ''),
+                color: AppColor.primaryColor,
+                fontSize: 32.sp,
+                fontWeight: FontWeight.w700,
+                fontFamily: ''),
           ),
         ),
       ),

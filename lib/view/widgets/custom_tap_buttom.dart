@@ -20,7 +20,7 @@ class CustomTapButton extends StatelessWidget {
         height: 32.h,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.r),
-            color: isSelected ? const Color(0xffCC9B76) : Colors.transparent),
+            color: isSelected ? AppColor.orangeColor : Colors.transparent),
         child: Text(
           title,
           style: const TextStyle(color: Colors.white),

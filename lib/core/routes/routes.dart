@@ -4,4 +4,5 @@ class Routes {
   static const String azkarView = '/azkarView';
   static const String tasbihView = '/tasbihView';
   static const String quranView = '/quranView';
+  static const String surahView = '/surahView';
 }

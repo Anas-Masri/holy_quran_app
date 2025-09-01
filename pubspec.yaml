@@ -36,6 +36,7 @@ dependencies:
   get: 
   google_fonts: null
   http: ^1.2.2
+  just_audio: ^0.9.46
   path_provider: null
   quran: null
   segment_display:
@@ -64,6 +65,8 @@ flutter:
   assets:
     - assets/svg/
     - assets/images/
+    - assets/images/qurra/
+
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
